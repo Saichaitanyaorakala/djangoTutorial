@@ -1,0 +1,28 @@
+  <!Doctype html>
+
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+  </head>
+
+  <body>
+     	<form action='login' method='post'>
+          {% csrf_token %}
+          <input type="text" name="username" placeholder="username"><br>
+          <input type="password" name="password" placeholder="password"><br>
+          <input type="Submit">
+     		
+     	</form>
+      
+      <div>
+           {% for message in messages %}
+           <h3> {{messgae}} </h3>h3>
+           {% endfor %}
+      </div>
+  </body>
+  </html>
